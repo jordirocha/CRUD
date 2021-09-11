@@ -75,15 +75,18 @@ Must install these packages/software to run it perfectly:
 * [XAMPP](https://www.apachefriends.org/index.html)
 * [Composer](https://getcomposer.org/)
 * [MongoDB](https://www.mongodb.com/es)
-       
+
+###Configuration
+Have to include extension `mongodb` on your PHP.
+
 ### Run app
 Download the project on `htdocs` folder.
 
     git clone https://github.com/jordirocha/CRUD.git
-    cd CRUD/
+    cd CRUD-main/
     composer install
 
-After that open your web browser and paste: `http://localhost/crud/index.php`.
+After that open your web browser and paste: `http://localhost/crud-main/index.php`.
 
 ## Contact
 
