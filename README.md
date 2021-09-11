@@ -28,12 +28,15 @@
 <div align="center">
   <img src="https://github.com/jordirocha/ConvertGIFToASCII/blob/main/img/demo.gif" />
 </div>
-ConvertGIFToASCII is a GUI program to convert our favorites GIF's into ASCII. 
-It's simple just select the file and then press button convert, after that a new terminal window will display it, showing the result.
+With this project I joined PHP and MongoDB, making a CRUD applying basic operations: create, read, update and delete.
 
 ### Built With
-* [Python](https://www.python.org/)
-* Bash Shell
+* PHP
+* MongoDB
+* JavaScript
+* HTML
+* CSS
+* Bootstrap 5
 
 ### Project Directories
     ├── dependencies.sh
