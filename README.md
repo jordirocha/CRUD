@@ -19,7 +19,6 @@
   * [Project Directories](#project-directories)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
   * [Run app](#run-app)
 * [Contact](#contact)
 
@@ -72,25 +71,18 @@ With this project I joined PHP and MongoDB, making a CRUD applying basic operati
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
-Must install these packages to run it perfectly:
+Must install these packages/software to run it perfectly:
 * [XAMPP](https://www.apachefriends.org/index.html)
 * [Composer](https://getcomposer.org/)
 * [MongoDB](https://www.mongodb.com/es)
-
-### Installation
-I will bring you a script that make all this job, just execute it.
-
-       $ ./dependencies.sh
        
 ### Run app
-By command line:
+    git clone https://github.com/jordirocha/GameApp.git
+    cd MyMovieList/
+    composer install
+    npm start
 
-       python3 main.py
-       
-You can even execute like a shorcut (only works on KDE distros), clicking on `main.py`, by doing this first:
- 
-       $ chmod +x main.py
-
+After that open your web browser and paste: `http://localhost/simplecrud/index.php`.
 
 ## Contact
 
