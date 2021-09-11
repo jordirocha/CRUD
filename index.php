@@ -30,7 +30,7 @@ $employees = $collection->find(array(), array('limit' => $items, 'skip' => $star
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="css/index.css">
     <title>CRUD PHP & MongoDB</title>
 
 </head>
@@ -77,7 +77,7 @@ $employees = $collection->find(array(), array('limit' => $items, 'skip' => $star
                                     <td><?php echo $employee['job_title'] ?></td>
                                     <td><?php echo $employee['department'] ?></td>
                                     <td>
-                                        <i class="far fa-edit edit me-2 edit" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+                                        <i class="far fa-edit edit me-2" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
                                         <i class="far fa-trash-alt trash delete" data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
                                     </td>
                                 </tr>
@@ -113,7 +113,7 @@ $employees = $collection->find(array(), array('limit' => $items, 'skip' => $star
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header bg-primary">
-                    <h5 class="modal-title text-white" id="content-modal-title">New Employee</h5>
+                    <h5 class="modal-title text-white" id="content-modal-title"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div id="content-modal-body" class="modal-body">
