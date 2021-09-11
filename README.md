@@ -55,9 +55,9 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 Must install these packages to run it perfectly:
-* [PySimpleGUI](https://github.com/PySimpleGUI/PySimpleGUI)
-* [FFmpeg](https://github.com/FFmpeg/FFmpeg)
-* Tkinter
+* [XAMPP](https://www.apachefriends.org/index.html)
+* [Composer](https://getcomposer.org/)
+* [MongoDB](https://www.mongodb.com/es)
 
 ### Installation
 I will bring you a script that make all this job, just execute it.
