@@ -1,12 +1,12 @@
 <p align="center">
   <a href="https://game-app-store.herokuapp.com/">
-    <img src="https://github.com/jordirocha/CRUD/blob/main/src/public/img/icon.png" alt="Logo" width="140" height="140">
+    <img src="https://github.com/jordirocha/CRUD/blob/main/src/public/img/crud.png" alt="Logo" width="140" height="140">
   </a>
 
   <h3 align="center">CRUD</h3>
 
   <p align="center">
-    Just a simple minimalistic CRUD made it with PHP and database used MongoDB
+    Just a simple minimalistic CRUD made it with PHP and database used MongoDB.
     <br />
     <br />
   </p>
@@ -20,6 +20,7 @@
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
   * [Run app](#run-app)
+  * [Configuration](#configuration)
 * [Contact](#contact)
 
 
