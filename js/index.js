@@ -39,7 +39,7 @@ function updateEmployee() {
     };
     $.ajax({
         type: "POST",
-        url: "update.php",
+        url: "../../src/update.php",
         data: userdata,
         success: function (data) {
             window.location.reload(true);

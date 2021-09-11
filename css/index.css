@@ -1,20 +1,16 @@
-
 * {
     font-family: 'Inter', sans-serif;
-
 }
 
 .trash:hover {
     color: red;
-
 }
 
 .edit:hover {
     color: rgb(131, 123, 241);
 }
 
-.trash:hover,
-.edit:hover {
+.trash:hover, .edit:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
