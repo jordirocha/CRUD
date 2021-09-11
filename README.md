@@ -85,7 +85,7 @@ Install MongoDB driver for PHP:
 Have to include extension `mongodb` on your PHP.
 Example on Windows, file `php.ini`:
 
-      extension=php_mongodb.dll
+    extension=php_mongodb.dll
 ### Run app
 Download the project on `htdocs` folder.
 
