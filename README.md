@@ -26,7 +26,7 @@
 
 ### About the Project
 <div align="center">
-  <img src="https://github.com/jordirocha/ConvertGIFToASCII/blob/main/img/demo.gif" />
+  <img src="https://github.com/jordirocha/CRUD/blob/main/demo.gif" />
 </div>
 With this project I joined PHP and MongoDB, making a CRUD applying basic operations: create, read, update and delete.
 
