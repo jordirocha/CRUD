@@ -1,0 +1,29 @@
+
+* {
+    font-family: 'Inter', sans-serif;
+
+}
+
+.trash:hover {
+    color: red;
+
+}
+
+.edit:hover {
+    color: rgb(131, 123, 241);
+}
+
+.trash:hover,
+.edit:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.table-hover tbody tr:hover td {
+    background: #edf2fa;
+}
+
+.table-border {
+    border-radius: 5px !important;
+    overflow: hidden;
+}

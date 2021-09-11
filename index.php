@@ -30,37 +30,9 @@ $employees = $collection->find(array(), array('limit' => $items, 'skip' => $star
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/index.css">
     <title>CRUD PHP & MongoDB</title>
-    <style>
-        * {
-            font-family: 'Inter', sans-serif;
 
-        }
-
-        .trash:hover {
-            color: red;
-
-        }
-
-        .edit:hover {
-            color: rgb(131, 123, 241);
-        }
-
-        .trash:hover,
-        .edit:hover {
-            cursor: pointer;
-            transform: scale(1.1);
-        }
-
-        .table-hover tbody tr:hover td {
-            background: #edf2fa;
-        }
-
-        .table-border {
-            border-radius: 5px !important;
-            overflow: hidden;
-        }
-    </style>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -165,7 +137,8 @@ $employees = $collection->find(array(), array('limit' => $items, 'skip' => $star
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script>
+    <script src="js/index.js"></script>
+    <!-- <script>
         var id = 0;
         $(".edit").click(function() {
             var $row = $(this).closest("tr"); // Find the row
@@ -329,7 +302,7 @@ $employees = $collection->find(array(), array('limit' => $items, 'skip' => $star
                 }
             });
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
