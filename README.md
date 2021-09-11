@@ -39,16 +39,34 @@ With this project I joined PHP and MongoDB, making a CRUD applying basic operati
 * Bootstrap 5
 
 ### Project Directories
-    ├── dependencies.sh
-    ├── img
-    │   ├── demo.gif
-    │   └── icon.png
-    ├── main.py
-    ├── README.md
-    └── scripts
-        ├── convertToASCII.sh
-        ├── resultToGif.sh
-        └── splitToFrames.sh
+        .
+        │   .gitattributes
+        │   .gitignore
+        │   composer.json
+        │   composer.lock
+        │   conf.php
+        │   demo.gif
+        │   index.php
+        │   README.md
+        │
+        ├───src
+            ├───app
+            │       delete.php
+            │       departments.php
+            │       insert.php
+            │       jobs.php
+            │       select.php
+            │       update.php
+            │
+            └───public
+                ├───css
+                │       index.css
+                │
+                ├───img
+                │       icon.png
+                │
+                └───js
+                        index.js
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
