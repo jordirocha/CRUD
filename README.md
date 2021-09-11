@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://game-app-store.herokuapp.com/">
-    <img src="https://github.com/jordirocha/ConvertGIFToASCII/blob/main/img/icon.png" alt="Logo" width="140" height="140">
+    <img src="https://github.com/jordirocha/CRUD/blob/main/src/public/img/icon.png" alt="Logo" width="140" height="140">
   </a>
 
   <h3 align="center">CRUD</h3>
