@@ -77,12 +77,13 @@ Must install these packages/software to run it perfectly:
 * [MongoDB](https://www.mongodb.com/es)
        
 ### Run app
-    git clone https://github.com/jordirocha/GameApp.git
-    cd MyMovieList/
-    composer install
-    npm start
+Download the project on `htdocs` folder.
 
-After that open your web browser and paste: `http://localhost/simplecrud/index.php`.
+    git clone https://github.com/jordirocha/CRUD.git
+    cd CRUD/
+    composer install
+
+After that open your web browser and paste: `http://localhost/crud/index.php`.
 
 ## Contact
 
