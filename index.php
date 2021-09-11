@@ -1,18 +1,16 @@
 <?php
-require_once 'conf.php';
+require 'conf.php';
 $total_emps = $collection->count(array());
 $items = 7;
 $paginations = $total_emps / $items;
-
 $paginations = ceil($paginations);
-$departments = $collection->distinct("department");
-$jobs = $collection->distinct("job_title");
 ?>
 
 <?php
 !$_GET ? header('Location:index.php?page=1') : '';
 $_GET['page'] > $paginations ? header('Location:index.php?page=1') : "";
 $_GET['page'] <= 0 ? header('Location:index.php?page=' . $paginations) : "";
+
 $start = ($_GET['page'] - 1) * $items;
 $employees = $collection->find(array(), array('limit' => $items, 'skip' => $start));
 ?>
@@ -30,7 +28,7 @@ $employees = $collection->find(array(), array('limit' => $items, 'skip' => $star
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="src/public/css/index.css">
     <title>CRUD PHP & MongoDB</title>
 
 </head>
@@ -39,8 +37,10 @@ $employees = $collection->find(array(), array('limit' => $items, 'skip' => $star
     <div class="container mb-5">
         <div class="vh-100 d-flex align-items-center">
             <div class="container-fluid">
-                <div class="d-flex justify-content-between align-items-center mb-1">
-                    <p class="fs-4">Employees</p>
+                <div class="d-flex justify-content-between mb-1">
+                    <div>
+                        <p class="fs-4">Employees</p>
+                    </div>
                     <div>
                         <button type="button" class="btn btn-primary new" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fas fa-user-plus"></i> New</button>
                     </div>
@@ -137,172 +137,8 @@ $employees = $collection->find(array(), array('limit' => $items, 'skip' => $star
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="js/index.js"></script>
-    <!-- <script>
-        var id = 0;
-        $(".edit").click(function() {
-            var $row = $(this).closest("tr"); // Find the row
+    <script src="src/public/js/index.js"></script>
 
-            id = $row.find(".idEmp").text(); // Find the text
-            var userdata = {
-                'id': id
-            };
-            $.ajax({
-                type: "POST",
-                url: "select.php",
-                data: userdata,
-                success: function(data) {
-                    document.getElementById('content-modal-body').innerHTML = data;
-                    document.getElementById('content-modal-btn').innerHTML =
-                        `<button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary" onclick="updateEmployee();">Update</button>`;
-                    document.getElementById('content-modal-title').innerHTML = 'Update Employee';
-                }
-            });
-        });
-
-        function updateEmployee() {
-            var email = $("#inputEmail").val();
-            var name = $("#inputName").val();
-            var surname = $("#inputLast").val();
-            var job = $("#inputJob").val();
-            var department = $("#inputDept").val();
-            var image = $("#inputImg").val();
-            var userdata = {
-                'id': id,
-                'email': email,
-                'name': name,
-                'surname': surname,
-                'job': job,
-                'department': department,
-                'image': image
-            };
-            $.ajax({
-                type: "POST",
-                url: "update.php",
-                data: userdata,
-                success: function(data) {
-                    window.location.reload(true);
-                }
-            });
-        }
-    </script>
-
-    <script>
-        $(".new").click(function() {
-            document.getElementById('content-modal-body').innerHTML = ` <form class="row g-3">
-        <div class="col-12">
-            <label for="inputEmail" class="form-label">Email</label>
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email" >
-        </div>
-        <div class="col-md-6">
-            <label for="inputName" class="form-label">Name</label>
-            <input type="text" class="form-control" id="inputName" placeholder="John" >
-        </div>
-        <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="inputLast" placeholder="Doe" >
-        </div>
-        <div class="col-md-6">
-            <label for="exampleDataList" class="form-label">Job</label>
-            <input class="form-control" list="datalistJobs" id="inputJob" placeholder="Type to search..." >
-            <datalist id="datalistJobs">
-           
-            </datalist>
-        </div>
-        <div class="col-md-6">
-            <label for="exampleDataList" class="form-label">Department</label>
-            <input class="form-control" list="datalistDept" id="inputDept" placeholder="Type to search..." >
-            <datalist id="datalistDept">
-               
-            </datalist>
-        </div>
-        <div class="col-12">
-            <label for="inputEmail4" class="form-label">Image</label>
-            <input type="text" class="form-control" id="inputImg" placeholder="Image URL">
-        </div>
-    </form>`;
-            document.getElementById('content-modal-btn').innerHTML =
-                `<button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-primary" onclick="newEmployee();">Create</button>`;
-            document.getElementById('content-modal-title').innerHTML = 'New Employee';
-            $.ajax({
-                type: "POST",
-                url: "jobs.php",
-                success: function(data) {
-                    document.getElementById('datalistJobs').innerHTML = data;
-                }
-            });
-            $.ajax({
-                type: "POST",
-                url: "departments.php",
-                success: function(data) {
-                    document.getElementById('datalistDept').innerHTML = data;
-                }
-            });
-        });
-
-        function newEmployee() {
-            var email = $("#inputEmail").val();
-            var name = $("#inputName").val();
-            var surname = $("#inputLast").val();
-            var job = $("#inputJob").val();
-            var department = $("#inputDept").val();
-            var image = $("#inputImg").val();
-            var userdata = {
-                'email': email,
-                'name': name,
-                'surname': surname,
-                'job': job,
-                'department': department,
-                'image': image
-            };
-            $.ajax({
-                type: "POST",
-                url: "insert.php",
-                data: userdata,
-                success: function(data) {
-                    window.location.reload(true);
-                    // console.log(data);
-                }
-            });
-        }
-    </script>
-    <script type="text/javascript">
-        var id = 0;
-        $(".delete").click(function() {
-            var $row = $(this).closest("tr"); // Find the row
-            var $text = $row.find(".nr").text(); // Find the text
-            document.getElementById('content-modal-title').innerHTML = 'Delete Employee';
-            document.getElementById('content-modal-body').innerHTML =
-                `<p>Are you sure you want to delete <span class="fw-bolder">${$text}</span> employee? 
-            All their data will be permanently removed. This action cannot be undone.</p>`;
-            document.getElementById('content-modal-btn').innerHTML =
-                `<button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancel</button>
-                <button type="button" class="btn btn-danger" onclick="deleteEmployee();">Delete</button>`;
-        });
-
-
-        $(".delete").click(function() {
-            var $row = $(this).closest("tr"); // Find the row
-            id = $row.find(".idEmp").text(); // Find the text
-        });
-
-        function deleteEmployee() {
-            var userdata = {
-                'id': id
-            };
-            $.ajax({
-                type: "POST",
-                url: "delete.php",
-                data: userdata,
-                success: function(data) {
-                    window.location.reload(true);
-                    // console.log(data);
-                }
-            });
-        }
-    </script> -->
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <?php
-require 'conf.php';
+require '../../conf.php';
 $jobs = $collection->distinct("job_title");
 ?>
 

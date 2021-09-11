@@ -1,5 +1,5 @@
 <?php
-require 'conf.php';
+require '../../conf.php';
 $collection->updateOne(['id' => (int)$_POST['id']], [
     '$set' =>
 

@@ -1,5 +1,5 @@
 <?php
-require 'conf.php';
+require '../../conf.php';
 $employee = $collection->find(['id' => (int)$_POST['id']])->toArray();
 $jobs = $collection->distinct("job_title");
 $departments = $collection->distinct("department");

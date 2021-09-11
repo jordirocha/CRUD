@@ -1,5 +1,5 @@
 <?php
-require 'conf.php';
+require '../../conf.php';
 $departments = $collection->distinct("department");
 ?>
 

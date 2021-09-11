@@ -1,8 +1,8 @@
 <?php
-require 'conf.php';
+require '../../conf.php';
 $total_emps = $collection->count(array());
 $max_id = $collection->find(array(), array('skip' => $total_emps - 1))->toArray();
-// echo $max_id[0]['id'] + 1;
+
 $insertData = $collection->insertOne([
     'id' => $max_id[0]['id'] + 1,
     'email' => $_POST['email'],
