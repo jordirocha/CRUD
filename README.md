@@ -6,7 +6,7 @@
   <h3 align="center">CRUD</h3>
 
   <p align="center">
-    Simple graphical program to convert GIF's into ASCII animated and colored.
+    Just a simple minimalistic CRUD made it with PHP and database used MongoDB
     <br />
     <br />
   </p>
