@@ -75,10 +75,17 @@ Must install these packages/software to run it perfectly:
 * [XAMPP](https://www.apachefriends.org/index.html)
 * [Composer](https://getcomposer.org/)
 * [MongoDB](https://www.mongodb.com/es)
+* [MongoDB driver for PHP](https://pecl.php.net/package/mongodb)
 
-###Configuration
+### Configuration
+Install MongoDB driver for PHP:
+    
+    https://pecl.php.net/package/mongodb
+    
 Have to include extension `mongodb` on your PHP.
+Example on Windows, file `php.ini`:
 
+      extension=php_mongodb.dll
 ### Run app
 Download the project on `htdocs` folder.
 
