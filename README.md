@@ -78,8 +78,8 @@ Must install these packages/software to run it perfectly:
 * [MongoDB driver for PHP](https://pecl.php.net/package/mongodb)
 
 ### Configuration
-Install [MongoDB driver](https://pecl.php.net/package/mongodb) </br>for PHP.
-Copy and pasted on this location:
+Install [MongoDB driver](https://pecl.php.net/package/mongodb) for PHP.
+ </br>Copy and pasted on this location:
         
     C:\xampp\php\ext   
     
