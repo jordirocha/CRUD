@@ -40,31 +40,31 @@ With this project I joined PHP and MongoDB, making a CRUD applying basic operati
 
 ### Project Directories
 
-                      .
-                      ├── composer.json
-                      ├── composer.lock
-                      ├── conf.php
-                      ├── demo.gif
-                      ├── employees.json
-                      ├── index.php
-                      ├── project.txt
-                      ├── README.md
-                      └── src
-                          ├── app
-                          │   ├── delete.php
-                          │   ├── departments.php
-                          │   ├── insert.php
-                          │   ├── jobs.php
-                          │   ├── select.php
-                          │   └── update.php
-                          └── public
-                              ├── css
-                              │   └── index.css
-                              ├── img
-                              │   ├── crud.png
-                              │   └── icon.png
-                              └── js
-                                  └── index.js
+      .
+      ├── composer.json
+      ├── composer.lock
+      ├── conf.php
+      ├── demo.gif
+      ├── employees.json
+      ├── index.php
+      ├── project.txt
+      ├── README.md
+      └── src
+          ├── app
+          │   ├── delete.php
+          │   ├── departments.php
+          │   ├── insert.php
+          │   ├── jobs.php
+          │   ├── select.php
+          │   └── update.php
+          └── public
+              ├── css
+              │   └── index.css
+              ├── img
+              │   ├── crud.png
+              │   └── icon.png
+              └── js
+                  └── index.js
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
